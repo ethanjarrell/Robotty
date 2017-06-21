@@ -2,11 +2,57 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Directory of Robots</title>
+
   </head>
   <body>
 
-<img src={{img}}></img>
+<div class="outerContainer">{{#users}}
+<ul class="profileBox">
+  <li class="image"><img src="{{avatar}}"></img></li>
+  <li><span>Name: </span></li>
+<li class="name">{{name}}</li>
+<li><span>City: </span></li>
+
+<li class="city">{{address.city}}
+        {{^address.city}}
+        <li class="noCity">Missing Data</li>
+        {{/address.city}}</li>
+
+<li><span>Country: </span></li>
+<li class="country">{{address.country}}</li>
+<li><span>Job: </span></li>
+
+<li class="city">{{job}}
+        {{^job}}
+        <li class="noCity">Looking for work</li>
+        {{/job}}</li>
+
+<li><span>Company: </span></li>
+
+<li class="city">{{company}}
+        {{^company}}
+        <li class="noCity">Still looking for work</li>
+        {{/company}}</li>
+
+<li><span>Email: </span></li>
+<li class="email">{{email}}</li>
+<li><span>Phone: </span></li>
+<li class="phone">{{phone}}</li>
+<li><span>University: </span></li>
+
+<li class="city">{{university}}
+        {{^university}}
+        <li class="noCity">School isn't for me</li>
+        {{/university}}</li>
+
+<li><span>Skills: </span></li>
+<li class="skills">{{skills}}</li>
+
+
+</ul>
+  {{/users}}</div>
 
 
 <script type="text/javascript" src="../app/data.js"></script>
